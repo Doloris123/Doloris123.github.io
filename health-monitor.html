@@ -299,12 +299,8 @@
                         <div class="indicator-label">血压 (mmHg)</div>
                     </div>
                     <div class="indicator">
-                        <div class="indicator-value" id="temperature">36.8°C</div>
-                        <div class="indicator-label">体温</div>
-                    </div>
-                    <div class="indicator">
-                        <div class="indicator-value" id="oxygen">98%</div>
-                        <div class="indicator-label">血氧饱和度</div>
+                        <div class="indicator-value" id="symptomCategory">无</div>
+                        <div class="indicator-label">呼吸道症状类别</div>
                     </div>
                     <div class="indicator">
                         <div class="indicator-value" id="respiratory">16</div>
@@ -313,6 +309,10 @@
                     <div class="indicator">
                         <div class="indicator-value" id="stress">低</div>
                         <div class="indicator-label">压力水平</div>
+                    </div>
+                    <div class="indicator">
+                        <div class="indicator-value" id="symptomsNamber">0</div>
+                        <div class="indicator-label">呼吸道症状数量</div>
                     </div>
                 </div>
             </div>
@@ -537,8 +537,8 @@
                     document.getElementById('heartRate').textContent = indicators.heart_rate;
                     document.getElementById('bloodPressure').textContent = 
                         `${indicators.blood_pressure_systolic}/${indicators.blood_pressure_diastolic}`;
-                    document.getElementById('temperature').textContent = indicators.temperature + '°C';
-                    document.getElementById('oxygen').textContent = indicators.oxygen_saturation + '%';
+                    //document.getElementById('temperature').textContent = indicators.temperature + '°C';
+                    //document.getElementById('oxygen').textContent = indicators.oxygen_saturation + '%';
                     document.getElementById('respiratory').textContent = indicators.respiratory_rate;
                     document.getElementById('stress').textContent = indicators.stress_level;
                 }
@@ -548,8 +548,8 @@
                 const indicators = {
                     heartRate: Math.floor(Math.random() * 30) + 60,
                     bloodPressure: `${Math.floor(Math.random() * 40) + 110}/${Math.floor(Math.random() * 20) + 70}`,
-                    temperature: (36.5 + Math.random() * 0.8).toFixed(1) + '°C',
-                    oxygen: Math.floor(Math.random() * 5) + 95 + '%',
+                    //temperature: (36.5 + Math.random() * 0.8).toFixed(1) + '°C',
+                    //oxygen: Math.floor(Math.random() * 5) + 95 + '%',
                     respiratory: Math.floor(Math.random() * 8) + 12,
                     stress: ['低', '中', '高'][Math.floor(Math.random() * 3)]
                 };
